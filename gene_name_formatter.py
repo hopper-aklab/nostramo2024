@@ -16,9 +16,9 @@
 # Needed for use: annotated genome [‘Original_Genome’].
 # Needed for use: blank file for formatted gene names to be written [‘Formatted_Gene_Names’].
 
-with open('Human Genome (RNA).txt', 'r') as a:
+with open('Original_Genome', 'r') as a:
     lines = a.readlines()
-with open("testfinal2", 'w') as b:
+with open("Formatted_Gene_Names", 'w') as b:
     for line in lines:
         if line.startswith(">"):
             b.write(line.replace('\n', ''))
@@ -26,7 +26,7 @@ with open("testfinal2", 'w') as b:
             b.write("\n")
         # deletes everything except annotations (any line not starting with '>').
 
-with open("testfinal2", 'r+') as c:
+with open("Formatted_Gene_Names", 'r+') as c:
     allLines = c.readlines()
     c.truncate(0)
     c.seek(0)
