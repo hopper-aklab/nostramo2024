@@ -22,7 +22,7 @@ Using 'genome_formatter' and 'gene_name_formatter' on the same annotated genome 
 
 'scrambled_genome_generator_and_complementarity_counter' generates scrambled genomes that maintain codon usage in each line. These genomes are automatically searched for complementarity to an input sequence (note: this program only support perfect complementarity).
 
-# Usage in Nostramo et al., 2024
+# Usage in Nostramo et al.
 For use in subsequent programs, annotated genomes were formatted using 'genome_formatter’ and ‘gene_name_formatter’. For S. cerevisiae genomes, ‘gene_name_truncator,’ was utilized to trim gene annotations to only include the gene names.
 
 ‘complementarity_counter’ was used to identify and determine region of complementarity in each tRNA intron sequence in S. cerevisiae (to ORFs and UTRs) and Humans (to transcripts). Parameters for complementarity were selected to have a reasonable number of genes to test via RT-qPCR.
