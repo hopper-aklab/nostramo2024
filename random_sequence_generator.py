@@ -19,7 +19,7 @@ from random import shuffle
 
 seqLength = int(input('Desired Sequence Length: '))
 GCcontent = float(input('GC Ratio (decimal): '))
-Loop = int(input('Loop?: '))
+Loop = int(input('Number of Sequences to Generate: '))
 
 for a in range(Loop):
     sequence = [choice('GC') for b in range(round(GCcontent * seqLength))]
