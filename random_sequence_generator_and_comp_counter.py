@@ -28,7 +28,7 @@ placeholder2 = 'Y'
 
 seqLength = int(input('Desired Sequence Length: '))
 GCcontent = float(input('GC Ratio (decimal): '))
-Loop = int(input('Loop?: '))
+Loop = int(input('Number of Sequences to Generate: '))
 generatedSequenceList = []
 
 
