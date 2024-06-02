@@ -83,7 +83,6 @@ if __name__ == "__main__":
     seqNumber = 0
     for intronSeq in allIntronSeq:
         print(intronSeqNames[seqNumber])
-        seqNumber += 1
         seqOriginal = intronSeq.upper()
         seqAdjusted = seqOriginal[::-1].upper().replace(uracil, thymine).replace(thymine, placeholder1).replace(guanine, placeholder2).replace(adenine, thymine).replace(cytosine, guanine).replace(placeholder1, adenine).replace(placeholder2, cytosine)
         # creates the reverse complement of the input sequence.
@@ -125,7 +124,7 @@ if __name__ == "__main__":
 
             geneIndex2 += 1
 
-        if YNmismatch == 'Y':
+        if YNmismatch == 'Y' and intronSeqNames[seqNumber] != 'Placeholder':
             # ran only if mismatches are selected (computationally intensive).
             print('*perfect complete, moving to mismatched complementarity')
             pool = multiprocessing.Pool()
@@ -155,6 +154,7 @@ if __name__ == "__main__":
         print('')
         # prints number of ORFs/genes/UTRs/etc. fitting criteria.
         intronSeqComp.append(len(geneIndexAdapted))
+        seqNumber += 1
 
     print('')
     for intronName in intronSeqNames:
