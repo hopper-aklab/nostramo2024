@@ -45,7 +45,7 @@ while n2 <= len(seqAdjusted):
     n2 += 1
     # splits reverse complement ssDNA into all possible segments of a desired length
 
-loop = int(input('Loop? '))
+loop = int(input('Number of Scrambled Genomes to Generate: '))
 
 file2 = open("Scrambled_Regenerated_Genome", "a")
 
