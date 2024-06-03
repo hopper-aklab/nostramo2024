@@ -16,7 +16,7 @@ Python 3.11 code for the manuscript titled: 'FitRNA for duty: Free introns of tR
 Using 'genome_formatter' and 'gene_name_formatter' on the same annotated genome will generate two alligned files, one with the gene sequences and one with the gene annotations.
 'gene_nane_truncator' can be used to trim the gene annotation file to only include the gene names. Preparing a formatted genome and gene name file is necessary for usage of the following programs.
 
-'complementarity_counter' can be used to determine the complementary genes (or ORFs/UTRs/etc depending on genome used) of an input sequence. This program can be used to search for mismatched complementarity efficiently.
+'complementarity_counter' can be used to determine the complementary genes (or ORFs/UTRs/etc depending on genome used) of an input sequence. This program can be used to search for mismatched complementarity.
 
 'random_sequence_generator' generates randomized ssDNA nucleotide sequences at a specified length and GC content. These can then be fed into 'complementarity_counter' or, alternatively, 'random_sequence_generator_and_complementarity_counter' can be used to automatically find the complementarity of each random sequence as it is generated (note: this program only supports perfect complementarity).
 
