@@ -47,8 +47,6 @@ while n2 <= len(seqAdjusted):
 
 loop = int(input('Number of Scrambled Genomes to Generate: '))
 
-file2 = open("Scrambled_Regenerated_Genome", "a")
-
 
 def randomize_line(line1):
     subline = [line1[i:i + 3] for i in range(0, len(line1), 3) if line1[i:i + 3].isalpha()]
@@ -57,15 +55,19 @@ def randomize_line(line1):
     file2.write(randomized_line + "\n")
     # scrambles each line of the genome, maintaining codon usage.
 
+
+print('Complementary Genes per Scrambled Genome: ')
 for x in range(loop):
     originalGenome = open("Formatted_Genome", "r")
+    file2 = open("Scrambled_Regenerated_Genome", "a")
     for line in originalGenome:
         randomize_line(line)
+    file2.close()
         # generates the scrambled genome by running the function for each line.
 
     geneCount = 0
 
-    scrambledGenome = open('Scrambled_Regenerated_Genome', 'r').readlines()
+    scrambledGenome = open('Scrambled_Regenerated_Genome', 'r+')
     for gene in scrambledGenome:
         exist = False
         for segment in segmentList:
@@ -75,9 +77,19 @@ for x in range(loop):
             geneCount += 1
         # searches the scrambled genome for each segment of the reverse complement ssDNA.
         # counts number of genes with complementarity to the input sequence in the scrambled genome.
-
-    file2.truncate(0)
+    
+    # to save scrambled genomes, include code below and specify a folder (path) to save at:
+    # path = 'path to folder'
+    # pathFullString = path + "/scrambledGenome" + str(x) + '.txt'
+    # _ = open(pathFullString, "x+")
+    # savedGenome = open(pathFullString, "w+")
+    # scrambledGenome = open('Scrambled_Regenerated_Genome', 'r+')
+    # for line in scrambledGenome:
+    #    savedGenome.write(line)
+    
+    scrambledGenome.truncate(0)
+    scrambledGenome.close()
     # clears the scrambled genome.
-
-    print('Gene #: ' + str(geneCount))
+ 
+    print(geneCount)
     # prints results.
