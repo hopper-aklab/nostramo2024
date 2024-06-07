@@ -23,11 +23,11 @@ Using 'genome_formatter' and 'gene_name_formatter' on the same annotated genome 
 'scrambled_genome_generator_and_complementarity_counter' generates scrambled genomes that maintain codon usage in each line. These genomes are automatically searched for complementarity to an input sequence (note: this program only support perfect complementarity).
 
 # Usage in Nostramo et al.
-For use in subsequent programs, annotated genomes were formatted using 'genome_formatter’ and ‘gene_name_formatter’. For S. cerevisiae genomes, ‘gene_name_truncator,’ was utilized to trim gene annotations to only include the gene names.
+For use in subsequent programs, annotated genomes were formatted using 'genome_formatter’ and ‘gene_name_formatter’. For _S. cerevisiae_ genomes, ‘gene_name_truncator,’ was utilized to trim gene annotations to only include the gene names.
 
-‘complementarity_counter’ was used to identify and determine region of complementarity in each tRNA intron sequence in S. cerevisiae (to ORFs and UTRs) and Humans (to transcripts). Parameters for complementarity were selected to have a reasonable number of genes to test via RT-qPCR.
+‘complementarity_counter’ was used to identify and determine region of complementarity in each tRNA intron sequence in _S. cerevisiae_ (to ORFs and UTRs) and Humans (to transcripts). Parameters for complementarity were selected to have a reasonable number of genes to test via RT-qPCR.
 
-‘scrambled_genome_generator_and_complementarity_counter’ was used to generate codon scrambled genomes and measure the complementarity of the S. cerevisiae tRNA<sup>Ile</sup> intron in each.
+‘scrambled_genome_generator_and_complementarity_counter’ was used to generate codon scrambled genomes and measure the complementarity of the _S. cerevisiae_ tRNA<sup>Ile</sup> intron in each.
 
-‘random_sequence_generator_and_complementarity_counter’ was used to generate random sequences at a specific length and GC content and measure their complementarity to ORFs in S. cerevisiae. To measure random sequences for complementarity with mismatches, the sequences were first generated at the GC content of the relevant tRNA intron using ‘random_sequence_generator’ and then ran through ‘complementarity_counter’ from a text document. For matching sequence data, the programs were modified as indicated in the code comments. 
+‘random_sequence_generator_and_complementarity_counter’ was used to generate random sequences at a specific length and GC content and measure their complementarity to ORFs in _S. cerevisiae_. To measure random sequences for complementarity with mismatches, the sequences were first generated at the GC content of the relevant tRNA intron using ‘random_sequence_generator’ and then ran through ‘complementarity_counter’ from a text document. For matching sequence data, the programs were modified as indicated in the code comments. 
 Due to their computationally intensive nature, mismatched complementarity searches were run on the Ohio Supercomputer Center.
